@@ -14,7 +14,8 @@
     "mysql2": "^3.11.0",
     "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.3",
-    "sequelize-typescript": "^2.1.6"
+    "sequelize-typescript": "^2.1.6",
+    "tsyringe": "^4.8.0"
   },
   "devDependencies": {
     "@types/node": "^22.1.0",
