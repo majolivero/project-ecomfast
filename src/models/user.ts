@@ -36,7 +36,7 @@ export class User extends Model {
 
     @ForeignKey(() => Role)
     @Column({
-        type: DataType.STRING,
+        type: DataType.NUMBER,
         allowNull: false,
     })
     roleId! : number;
