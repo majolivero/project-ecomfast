@@ -28,5 +28,5 @@ export class Role extends Model {
     name! : string;
 
     @HasMany(() => User)
-    roles! : Role[];
+    users! : User[];
 }
