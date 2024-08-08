@@ -5,7 +5,6 @@ import {
     DataType,
     PrimaryKey,
     AutoIncrement,
-    BelongsToMany,
     ForeignKey,
 }from 'sequelize-typescript';
 import { Cart } from './cart';

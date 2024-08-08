@@ -6,8 +6,11 @@ import {
     PrimaryKey,
     AutoIncrement,
     ForeignKey,
+    BelongsToMany,
 } from "sequelize-typescript";
 import { User } from './user';
+import { ProductCart } from './productCart';
+import { Product } from './product';
 
 @Table({
     tableName : "carts",
@@ -27,4 +30,7 @@ export class Cart extends Model {
         allowNull : false,
     })
     userId! : number;
+
+    @BelongsToMany(() => ProductCart, () => Product)
+    product! : Product[];
 }
