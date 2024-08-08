@@ -16,7 +16,9 @@ orderRouter.delete('/:id',OrderController.deleteOrder);
 orderRouter.get('/',OrderController.getAllOrders);
 
 //Obtener todas la ordenes realizadas por ID de usuario
-orderRouter.get('/order/:userId',OrderController.getOrdersByUserId);
+orderRouter.get('/users/:userId/orders',OrderController.getOrdersByUserId);
+
+
 
 
 

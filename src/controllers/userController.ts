@@ -10,9 +10,28 @@ export default class UserController {
     }
 
     static async createUser(req:Request, res:Response){
-        const userService = container.resolve(UserService);
-        const user = await userService.createUser(req.body);
-        res.status(201).json(user);
+        try{
+            const userService = container.resolve(UserService);
+            const user = await userService.createUser(req.body);
+            res.status(201).json({
+                message:"Usuario creado exitosamente",
+                data:user,
+            });
+        }catch(error:unknown){
+            if(error instanceof Error){
+                if(error.name === "ValidationError"){
+                    res.status(400).json({
+                        error: "Error de validación",
+                        message: error.message,
+                    });
+                }else{
+                    res.status(500).json({
+                        error: "Error interno en el servidor",
+                        message: error.message,
+                    });
+                }
+            }
+        }
     }
 
     static async updateUser(req:Request, res:Response){
