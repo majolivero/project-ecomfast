@@ -11,7 +11,7 @@ export default class OrderService {
     }
 
     async updateOrder(order:Order){
-        return await this.orderRepository.put(order);
+        return await this.orderRepository.update(order);
     }
 
     async deleteOrder(id:number){

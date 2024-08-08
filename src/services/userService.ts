@@ -19,7 +19,7 @@ export default class UserService {
   }
 
   async updateUser(user:User){
-    return await this.userRepository.put(user);
+    return await this.userRepository.update(user);
   }
 
 }

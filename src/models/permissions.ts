@@ -8,13 +8,13 @@ import {
     ForeignKey,
 }from 'sequelize-typescript';
 import { Role } from './role';
-import { Entity } from './entities';
+import { Entities } from './entities';
 
 @Table({
     tableName : "permissions",
     timestamps : true,
 })
-export class Permission extends Model{
+export class Permissions extends Model{
     @PrimaryKey
     @AutoIncrement
     @Column({
@@ -53,7 +53,7 @@ export class Permission extends Model{
     })
     roleId! : number;
 
-    @ForeignKey(() => Entity)
+    @ForeignKey(() => Entities)
     @Column({
         type:DataType.INTEGER,
         allowNull:false,

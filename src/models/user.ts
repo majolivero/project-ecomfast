@@ -39,10 +39,17 @@ export class User extends Model {
 
     @ForeignKey(() => Role)
     @Column({
-        type: DataType.NUMBER,
+        type: DataType.INTEGER,
         allowNull: false,
     })
     roleId! : number;
+
+    @ForeignKey(() => Cart)
+    @Column({
+        type: DataType.INTEGER,
+        allowNull:false,
+    })
+    cartId! : number;
 
     @BelongsTo(() => Role)
     role! : Role;

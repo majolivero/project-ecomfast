@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Product,User,Role,Cart,ProductCart,Order,Entities,Permissions} from '..models/';
+import { Product,User,Role,Cart,ProductCart,Order,Entities,Permissions} from '../models';
 
 const sequelize: Sequelize = new Sequelize({
     dialect: 'mysql',

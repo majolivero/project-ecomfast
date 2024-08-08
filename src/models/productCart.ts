@@ -25,26 +25,25 @@ export class ProductCart extends Model {
     id! : number;
 
     @Column({
-        type : DataType.NUMBER,
+        type : DataType.INTEGER,
         allowNull : false,
     })
     quantity! : number;
 
     @ForeignKey(() => Cart)
     @Column({
-        type: DataType.NUMBER,
+        type: DataType.INTEGER,
         allowNull: false,
     })
     cartId! : number;
 
     @ForeignKey(() => Product)
     @Column({
-        type: DataType.NUMBER,
+        type: DataType.INTEGER,
         allowNull: false,
     })
     productId! : number;
 
     @HasMany(() => Order)
     orders! : Order[];
-
 }

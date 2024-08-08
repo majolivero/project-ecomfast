@@ -15,6 +15,6 @@ export default class CartService {
     }
 
     async updateCart(cart:Cart){
-        return await this.cartRepository.put(cart);
+        return await this.cartRepository.update(cart);
     }
 }

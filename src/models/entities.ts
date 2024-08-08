@@ -11,7 +11,7 @@ import {
     tableName : "entities",
     timestamps : true,
 })
-export class Entitie extends Model {
+export class Entities extends Model {
     @PrimaryKey
     @AutoIncrement
     @Column({
