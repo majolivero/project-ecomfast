@@ -11,7 +11,7 @@ export default class ProductService {
     }
 
     async updateProduct(product:Product){
-        return await this.productRepository.put(product);
+        return await this.productRepository.update(product);
     }
 
     async deleteProduct(id:number){

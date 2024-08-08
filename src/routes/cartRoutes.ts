@@ -10,7 +10,7 @@ cartRouter.post('/',CartController.createCart);
 cartRouter.delete('/:id',CartController.deleteCart);
 
 //Actualizar cantidad de producto en el carrito de compras
-cartRouter.put('/cart/:quantity',CartController.updateCart);
+cartRouter.put('/',CartController.updateCart);
 
 
 
