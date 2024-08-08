@@ -45,4 +45,7 @@ export class Order extends Model{
 
     @BelongsTo(() => User)
     user! : User;
+
+    @BelongsTo(() => ProductCart)
+    productCart! : ProductCart;
 }

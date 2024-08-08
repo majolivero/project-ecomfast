@@ -6,9 +6,11 @@ import {
     PrimaryKey,
     AutoIncrement,
     ForeignKey,
+    HasMany,
 }from 'sequelize-typescript';
 import { Cart } from './cart';
 import { Product } from './product';
+import { Order } from './order';
 
 @Table({
     tableName : "productsCarts",
@@ -41,4 +43,8 @@ export class ProductCart extends Model {
         allowNull: false,
     })
     productId! : number;
+
+    @HasMany(() => Order)
+    orders! : Order[];
+
 }
