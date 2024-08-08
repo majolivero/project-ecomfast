@@ -9,7 +9,7 @@ import {
     ForeignKey,
 }from 'sequelize-typescript';
 import { Cart } from './cart';
-import { Product } from './product'
+import { Product } from './product';
 
 @Table({
     tableName : "productsCarts",
@@ -27,7 +27,7 @@ export class ProductCart extends Model {
         type : DataType.NUMBER,
         allowNull : false,
     })
-    quantity! : string;
+    quantity! : number;
 
     @ForeignKey(() => Cart)
     @Column({
