@@ -7,8 +7,11 @@ import {
     AutoIncrement,
     BelongsTo,
     ForeignKey,
+    HasMany,
 }from 'sequelize-typescript';
 import { Role } from './role';
+import { Cart } from './cart';
+import { Order } from '/.order';
 
 @Table({
     tableName : "users",
@@ -43,4 +46,11 @@ export class User extends Model {
 
     @BelongsTo(() => Role)
     role! : Role;
+
+    @BelongsTo(() => Cart)
+    cart! : Cart;
+
+    @HasMany(() => Order)
+    orders! : Order[];
+
 }

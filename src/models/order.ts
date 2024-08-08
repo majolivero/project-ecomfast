@@ -6,7 +6,7 @@ import{
     ForeignKey,
     PrimaryKey,
     AutoIncrement,
-    AllowNull,
+    BelongsTo,
 } from 'sequelize-typescript';
 import { User } from './user';
 import { ProductCart } from './productCart';
@@ -42,4 +42,7 @@ export class Order extends Model{
         allowNull:false,
     })
     productCartId! : number;
+
+    @BelongsTo(() => User)
+    user! : User;
 }
