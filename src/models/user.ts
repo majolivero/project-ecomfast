@@ -11,7 +11,7 @@ import {
 }from 'sequelize-typescript';
 import { Role } from './role';
 import { Cart } from './cart';
-import { Order } from '/.order';
+import { Order } from './order';
 
 @Table({
     tableName : "users",
