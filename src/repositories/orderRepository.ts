@@ -12,7 +12,7 @@ export default class ProductRepository {
     }
 
     async update(order: Partial<Order>){
-        return await Order.update(order,{where:{order}});
+        return await Order.update(order,{where:{id: order.id}});
     }
 
     async delete(id:number){

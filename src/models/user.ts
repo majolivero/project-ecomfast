@@ -44,18 +44,8 @@ export class User extends Model {
     })
     roleId! : number;
 
-    @ForeignKey(() => Cart)
-    @Column({
-        type: DataType.INTEGER,
-        allowNull:false,
-    })
-    cartId! : number;
-
     @BelongsTo(() => Role)
     role! : Role;
-
-    @BelongsTo(() => Cart)
-    cart! : Cart;
 
     @HasMany(() => Order)
     orders! : Order[];

@@ -12,7 +12,7 @@ export default class CartRepository {
     }
 
     async update(cart: Partial<Cart>){
-        return await Cart.update(cart,{where:{cart}});
+        return await Cart.update(cart,{where:{id: cart.userId}});
     }
 }
 

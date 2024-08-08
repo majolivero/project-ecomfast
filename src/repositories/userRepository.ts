@@ -16,6 +16,11 @@ export default class UserRepository {
     }
 
     async update(user: Partial<User>){
-        return await User.update(user,{where:{user}});
+        return await User.update(user,{where:{id: user.id}});
     }
+
+    async findByEmail(email:string){
+        return await User.findOne({where:{email}});
+    }
+
 }

@@ -22,4 +22,18 @@ export default class UserService {
     return await this.userRepository.update(user);
   }
 
+  async getUserByEmail(email:string):Promise<User | null>{
+    return await this.userRepository.findByEmail(email);
+  }
+
+  async checkUserCredentials(
+    email:string,
+    password:string
+  ):Promise<User>{
+    const user = await this.getUserByEmail(email);
+    if(user && user.password === password){
+      return user;
+    }
+    throw new Error("Invalid credentials");
+  }
 }
