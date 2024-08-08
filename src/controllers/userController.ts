@@ -24,6 +24,6 @@ export default class UserController {
     static async deleteUser(req:Request, res:Response){
         const userService = container.resolve(UserService);
         const user = await userService.deleteUser(parseInt(req.params.id));
-        res.json(user);
+        res.status(200).json(user);
     }
 }
