@@ -4,7 +4,7 @@ import UserController from '../controllers/userController';
 export const userRouter = Router();
 
 //Creación de usuarios
-userRouter.get('/',UserController.createUser);
+userRouter.post('/',UserController.createUser);
 
 //Eliminación de usuarios
 userRouter.delete('/:id',UserController.deleteUser);
