@@ -24,3 +24,5 @@ export default class UserRepository {
     }
 
 }
+
+//Utilizar aquí manejo de errores try/catch

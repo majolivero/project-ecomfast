@@ -12,3 +12,7 @@
   "include": ["src"]
 }
 
+//Falta outDir:
+//Falta rootDir
+//"exclude":["node_modules"]
+

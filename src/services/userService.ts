@@ -37,3 +37,5 @@ export default class UserService {
     throw new Error("Invalid credentials");
   }
 }
+
+//Faltó uso de try-catch
