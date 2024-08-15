@@ -46,6 +46,11 @@ export class Permissions extends Model{
     })
     canGet! : boolean;
 
+    @Column({
+        type:DataType.BOOLEAN,
+    })
+    canGetByOne! : boolean;
+
     @ForeignKey(() => Role)
     @Column({
         type:DataType.INTEGER,
